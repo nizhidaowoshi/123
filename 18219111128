@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>旅游</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+            <!--
+            .h1 {
+            font-family: "楷体";
+            font-size:80px;
+            text-shadow: 5px 5px 5px #0a83f3;
+            }
+            -->
+            <!--
+            .d{
+                font-family: "楷体"; 
+                font-size:30px;
+            }
+            img{float:left}
+            -->
+            #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: none;
+    width: 360px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+body{
+    background-color: #f3e4fa
+}
+            </style>
+    
+</head>
+<body>
+
+<ul id="myTab" class="nav nav-tabs">
+	<li class="active">
+		<a href="#home" data-toggle="tab">
+			 厦门
+		</a>
+	</li>
+	<li><a href="#上海" data-toggle="tab">上海</a></li>
+	<li class="dropdown">
+		<a href="#" id="myTabDrop1" class="dropdown-toggle" 
+		   data-toggle="dropdown">浙江
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+			<li><a href="#温州" tabindex="-1" data-toggle="tab">温州</a></li>
+			<li><a href="#乌镇" tabindex="-1" data-toggle="tab">乌镇</a></li>
+		</ul>
+	</li>
+</ul>
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="home">
+        <b><h1 class="h1" align="center">厦门</h1></b>
+        <hr>
+        <div class="row">
+                <div class="col-sm-7 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="img/1.jpg"
+                             alt="1">
+                    </a>
+                </div>
+                <div class="col-sm-7 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="img/3.jpg"
+                             alt="3">
+                    </a>
+                </div>
+                <div class="col-sm-7 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="img/2.jpg"
+                             alt="2">
+                    </a>
+                </div>
+                <div class="col-sm-7 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="img/4.jpg"
+                             alt="4">
+                    </a>
+                </div>
+                 <div class="col-sm-7 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="img/5.jpg"
+                             alt="5">
+                    </a>
+                </div>
+                 <div class="col-sm-7 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="img/6.jpg"
+                             alt="6">
+                    </a>
+                </div>
+            </div>
+	</div>
+	<div class="tab-pane fade" id="上海">
+		<b><h1 class="h1" align="center">上海</h1></b>
+        <hr>
+        <a href="https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7/114606?fr=aladdin.html">
+        <img border="0" src="img/7.jpg " alt="上海" width="600" height="400"></a>
+        <span class="d"><b>上海市，简称“沪”，是中国共产党的诞生地，是中华人民共和国省级行政区、直辖市，国家历史文化名城，国际经济、金融、贸易、航运、科技创新中心。上海位于中国华东地区，界于东经120°52′-122°12′，北纬30°40′-31°53′之间，地处长江入海口，东隔东中国海与日本九州岛相望，南濒杭州湾，北、西与江苏、浙江两省相接，上海市总面积6340.5平方千米。上海地处太平洋西岸，亚洲大陆东岸，长江三角洲前缘，中国南北弧形海岸线中部，位于长江三角洲冲积平原，平均海拔高度4米。西部有天马山、薛山、凤凰山等残丘，天马山为陆境海拔最高点。上海地跨长江口、淀山湖、黄浦江、吴淞江四大水系，境内江、河、湖、塘相间。上海属亚热带季风性气候，温和湿润，四季分明，日照充分，雨量充沛。</span></b>
+	</div>
+	<div class="tab-pane fade" id="温州">
+            <b><h1 class="h1" align="center">温州</h1></b>
+        <img id="myImg" src="img/8.jpg"  width="500" height="400">
+        <span class="d"><b>温州市，浙江省辖地级市，位于浙江省东南部， 瓯江下游南岸。介于北纬27度03分-28度36分、东经119度37分-121度18分之间；东濒东海，南毗福建，西及西北部与丽水市相连，北和东北部与台州市接壤；属中亚热带季风气候。全市陆域面积12065平方公里，海域面积约11000平方公里，下辖4个市辖区、5个县、2个县级市，户籍总人口828.7万人（2018年末）。唐高宗上元二年（公元675年），处州析置温州，这是温州得名的开始。建国后改称为温州区专员公署。其后，名称和辖县有所变动。1981年，温州地区和温州市合并建立温州市，实行市管县体制。温州是国家历史文化名城，素有“东南山水甲天下”之美誉。温州是中国民营经济发展的先发地区与改革开放的前沿阵地，改革开放初期，以“ 南有吴川 ，北有温州”享誉全国。温州文化属瓯越文化，是中国数学家的摇篮、中国南戏的故乡，温州人被称之为东方犹太人。</b></span>
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+      
+      <script>
+      // 获取模态窗口
+      var modal = document.getElementById('myModal');
+      
+      // 获取图片模态框，alt 属性作为图片弹出中文本描述
+      var img = document.getElementById('myImg');
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          modalImg.alt = this.alt;
+          captionText.innerHTML = this.alt;
+      }
+      
+      // 获取 <span> 元素，设置关闭模态框按钮
+      var span = document.getElementsByClassName("close")[0];
+      
+      // 点击 <span> 元素上的 (x), 关闭模态框
+      span.onclick = function() { 
+          modal.style.display = "none";
+      }
+      </script>
+	</div>
+	<div class="tab-pane fade" id="乌镇">
+            <b><h1 class="h1" align="center">乌镇</h1></b>
+        <div class="responsive">
+                <div class="img">
+                  <a target="_blank" href="img/wuzhen.jpg">
+                     <img src="img/wuzhen.jpg" alt="乌镇" width="500" height="400"/>
+                  </a>
+                  <div class="desc">乌镇</div>
+                  </div>
+                  </div>
+                  <span class="d"><b>乌镇，位于浙江省嘉兴市桐乡市，地处江浙沪“金三角”之地、杭嘉湖平原腹地，距杭州、苏州均为60公里，距上海106公里。属太湖流域水系，河流纵横交织，京杭大运河依镇而过。乌镇原以市河为界，分为乌青二镇，河西为乌镇，属湖州府乌程县；河东为青镇，属嘉兴府桐乡县。解放后，市河以西的乌镇划归桐乡县，才统称乌镇。乌镇是首批中国历史文化名镇、中国十大魅力名镇、全国环境优美乡镇、国家5A级景区，素有“中国最后的枕水人家”之誉，拥有7000多年文明史和1300年建镇史。是典型的中国江南水乡古镇，有“鱼米之乡、丝绸之府”之称。有六千年历史，是全国二十个黄金周预报景点及江南六大古镇之一。1991年被评为浙江省历史文化名城；2014年11月19日成为世界互联网大会永久会址。</b></span>
+	</div>
+</div>
+
+</body>
+</html>
